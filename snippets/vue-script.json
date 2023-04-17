@@ -1,15 +1,15 @@
 {
-  "Vue Data": {
+  "Vue2 Data": {
     "prefix": "vdata",
     "body": ["data() {", "\treturn {", "\t\t${1:key}: ${2:value}", "\t}", "},"],
     "description": "Vue Component Data"
   },
-  "Vue Methods": {
+  "Vue2 Methods": {
     "prefix": "vmethod",
     "body": ["methods: {", "\t${1:name}() {", "\t\t${0}", "\t}", "},"],
     "description": "vue method"
   },
-  "Vue Computed": {
+  "Vue2 Computed": {
     "prefix": "vcomputed",
     "body": [
       "computed: {",
@@ -20,47 +20,47 @@
     ],
     "description": "computed value"
   },
-  "Vue Lifecycle beforeCreate": {
+  "Vue2 Lifecycle beforeCreate": {
     "prefix": "vbeforecreate",
     "body": ["beforeCreate () {", "\t${0};", "},"],
     "description": "beforeCreate lifecycle method"
   },
-  "Vue Lifecycle created": {
+  "Vue2 Lifecycle created": {
     "prefix": "vcreated",
     "body": ["created () {", "\t${0};", "},"],
     "description": "created lifecycle method"
   },
-  "Vue Lifecycle beforeMount": {
+  "Vue2 Lifecycle beforeMount": {
     "prefix": "vbeforemount",
     "body": ["beforeMount () {", "\t${0};", "},"],
     "description": "beforeMount lifecycle method"
   },
-  "Vue Lifecycle mounted": {
+  "Vue2 Lifecycle mounted": {
     "prefix": "vmounted",
     "body": ["mounted () {", "\t${0};", "},"],
     "description": "mounted lifecycle method"
   },
-  "Vue Lifecycle beforeUpdate": {
+  "Vue2 Lifecycle beforeUpdate": {
     "prefix": "vbeforeupdate",
     "body": ["beforeUpdate () {", "\t${0};", "},"],
     "description": "beforeUpdate lifecycle method"
   },
-  "Vue Lifecycle updated": {
+  "Vue2 Lifecycle updated": {
     "prefix": "vupdated",
     "body": ["updated () {", "\t${0};", "},"],
     "description": "updated lifecycle method"
   },
-  "Vue Lifecycle beforeDestroy": {
+  "Vue2 Lifecycle beforeDestroy": {
     "prefix": "vbeforedestroy",
     "body": ["beforeDestroy () {", "\t${0};", "},"],
     "description": "beforeDestroy lifecycle method"
   },
-  "Vue Lifecycle destroyed": {
+  "Vue2 Lifecycle destroyed": {
     "prefix": "vdestroyed",
     "body": ["destroyed () {", "\t${0};", "},"],
     "description": "destroyed lifecycle method"
   },
-  "Vue Watchers": {
+  "Vue2 Watchers": {
     "prefix": "vwatcher",
     "body": [
       "watch: {",
@@ -71,7 +71,7 @@
     ],
     "description": "vue watcher"
   },
-  "Vue Watchers with Options": {
+  "Vue2 Watchers with Options": {
     "prefix": "vwatcher-options",
     "body": [
       "watch: {",
@@ -86,8 +86,8 @@
     ],
     "description": "vue watcher with options"
   },
-  "Vue Props with Default": {
-    "prefix": "vprops",
+  "Vue2 Props with Default": {
+    "prefix": "v2props",
     "body": [
       "props: {",
       "\t${1:propName}: {",
@@ -97,6 +97,25 @@
       "},"
     ],
     "description": "Vue Props with Default"
+  },
+  "Vue defineProps with Default": {
+    "prefix": "vprops",
+    "body": [
+      "const props = defineProps({",
+      "\t${1:propName}: {",
+      "\t\ttype: ${2:Number},",
+      "\t\tdefault: ${0}",
+      "\t},",
+      "});"
+    ],
+    "description": "Vue defineProps with Default"
+  },
+  "Vue defineEmits": {
+    "prefix": "vemits",
+    "body": [
+      "const emits = defineEmits([]);"
+    ],
+    "description": "Vue defineEmits"
   },
   "Vue Import File": {
     "prefix": "vimport",
@@ -126,8 +145,8 @@
     "body": ["${1:New} = () => import('@/components/${1:New}.vue')"],
     "description": "Import component that should be lazy loaded"
   },
-  "Vue MapState": {
-    "prefix": "vmapstate",
+  "Vue2 MapState": {
+    "prefix": "v2mapstate",
     "body": [
       "import { mapState } from 'vuex';",
       "",
@@ -141,8 +160,30 @@
     ],
     "description": "map getters inside a vue component"
   },
-  "Vue MapGetters": {
-    "prefix": "vmapgetters",
+  "Vue MapMutations": {
+    "prefix": "v2mapmutations",
+    "body": [
+      "import { mapMutations } from 'vuex';",
+      "",
+      "\t...mapMutations([",
+      "\t\t${1:'nameOfMutation'}, //also supports payload `this.nameOfMutation(amount)` ",
+      "\t]);"
+    ],
+    "description": "mapmutations inside a vue component"
+  },
+  "Vue MapActions": {
+    "prefix": "v2mapactions",
+    "body": [
+      "import { mapActions } from 'vuex';",
+      "",
+      "\t...mapActions([",
+      "\t\t${1:'nameOfAction'}, //also supports payload `this.nameOfAction(amount)` ",
+      "\t]);"
+    ],
+    "description": "mapactions inside a vue component"
+  },
+  "Vue2 MapGetters": {
+    "prefix": "v2mapgetters",
     "body": [
       "import { mapGetters } from 'vuex';",
       "",
@@ -156,8 +197,8 @@
     ],
     "description": "mapgetters inside a vue component"
   },
-  "Vue MapMutations": {
-    "prefix": "vmapmutations",
+  "Vue2 MapMutations": {
+    "prefix": "v2mapmutations",
     "body": [
       "import { mapMutations } from 'vuex';",
       "",
@@ -171,8 +212,8 @@
     ],
     "description": "mapmutations inside a vue component"
   },
-  "Vue MapActions": {
-    "prefix": "vmapactions",
+  "Vue2 MapActions": {
+    "prefix": "v2mapactions",
     "body": [
       "import { mapActions } from 'vuex';",
       "",
@@ -186,8 +227,8 @@
     ],
     "description": "mapactions inside a vue component"
   },
-  "Vue Filter": {
-    "prefix": "vfilter",
+  "Vue2 Filter": {
+    "prefix": "v2filter",
     "body": [
       "filters: {",
       "\t${1:fnName}: function(${2:value}) {",
@@ -197,8 +238,8 @@
     ],
     "description": "vue filter"
   },
-  "Vue Mixin": {
-    "prefix": "vmixin",
+  "Vue2 Mixin": {
+    "prefix": "v2mixin",
     "body": [
       "const ${1:mixinName} = {",
       "\tmounted() {",
@@ -209,7 +250,7 @@
     "description": "vue mixin"
   },
   "Vue Use Mixin": {
-    "prefix": "vmixin-use",
+    "prefix": "v2mixin-use",
     "body": ["mixins: [${1:mixinName}],"],
     "description": "vue use mixin"
   },
@@ -255,20 +296,16 @@
     "description": "transition component js hooks"
   },
   "Vue Commit Vuex Store in Methods": {
-    "prefix": "vcommit",
+    "prefix": "v2commit",
     "body": [
-      "${1:mutationName}() {",
-      "\tthis.\\$store.commit('${1:mutationName}', ${2:payload});",
-      "}"
+      "this.\\$store.commit('${1:mutationName}', ${2:payload});"
     ],
     "description": "commit to vuex store in methods for mutation"
   },
   "Vue Dispatch Vuex Store in Methods": {
-    "prefix": "vdispatch",
+    "prefix": "v2dispatch",
     "body": [
-      "${1:actionName}() {",
-      "\tthis.\\$store.dispatch('${1:actionName}', ${2:payload});",
-      "}"
+      "this.\\$store.dispatch('${1:actionName}', ${2:payload});"
     ],
     "description": "dispatch to vuex store in methods for action"
   },
@@ -305,22 +342,22 @@
     "description": "vue.config.js"
   },
   "Vue Composition API - Reactive": {
-    "prefix": "v3reactive",
-    "body": ["const ${1:name} = reactive({", "\t${2:count}: ${3:0}", "})"],
+    "prefix": "reactive",
+    "body": ["const ${1:data} = reactive({", "\t${2:count}: ${3:0}", "})"],
     "description": "Vue Composition api - reactive"
   },
   "Vue Composition API - Computed": {
-    "prefix": "v3computed",
+    "prefix": "computed",
     "body": ["const ${1:name} = computed(() => {", "\treturn ${2}", "})"],
     "description": "Vue Composition api - computed"
   },
   "Vue Composition API - watch - single source": {
-    "prefix": "v3watch",
+    "prefix": "watch",
     "body": ["watch(() => ${1:foo}, (newValue, oldValue) => {", "\t${2}", "})"],
     "description": "Vue Composition api - watcher single source"
   },
   "Vue Composition API - watch - array": {
-    "prefix": "v3watch-array",
+    "prefix": "watch-array",
     "body": [
       "watch([${1:foo}, ${2:bar}], ([new${1}, new${2}], [prev${1}, prev${2}]) => {",
       "\t${3}",
@@ -329,47 +366,47 @@
     "description": "Vue Composition api - watch as array"
   },
   "Vue Composition API - watchEffect": {
-    "prefix": "v3watcheffect",
+    "prefix": "watcheffect",
     "body": ["watchEffect(() => {", "\t${1}", "})"],
     "description": "Vue Composition api - watchEffect"
   },
   "Vue Composition API - Vue ref": {
-    "prefix": "v3ref",
+    "prefix": "ref",
     "body": ["const ${1:name} = ref(${2:initialValue})"],
     "description": "Vue Ref"
   },
   "Vue Lifecycle Hooks - onMounted": {
-    "prefix": "v3onmounted",
+    "prefix": "mounted",
     "body": ["onMounted(() => {${1}})"],
     "description": "Vue Mounted Lifecycle hook"
   },
   "Vue Lifecycle Hooks - onBeforeMount": {
-    "prefix": "v3onbeforemount",
+    "prefix": "beforemount",
     "body": ["onBeforeMount(() => {${1}})"],
     "description": "Vue onBeforeMount Lifecycle hook"
   },
   "Vue Lifecycle Hooks - onBeforeUpdate": {
-    "prefix": "v3onbeforeupdate",
+    "prefix": "beforeupdate",
     "body": ["onBeforeUpdate(() => {${1}})"],
     "description": "Vue onBeforeUpdate Lifecycle hook"
   },
   "Vue Lifecycle Hooks - onUpdated": {
-    "prefix": "v3onupdated",
+    "prefix": "updated",
     "body": ["onUpdated(() => {${1}})"],
     "description": "Vue onUpdated Lifecycle hook"
   },
   "Vue Lifecycle Hooks - onErrorCaptured": {
-    "prefix": "v3onerrorcaptured",
+    "prefix": "errorcaptured",
     "body": ["onErrorCaptured(() => {${1}})"],
     "description": "Vue onErrorCaptured Lifecycle hook"
   },
   "Vue Lifecycle Hooks - onUnmounted": {
-    "prefix": "v3onunmounted",
+    "prefix": "unmount",
     "body": ["onUnmounted(() => {${1}})"],
     "description": "(destroyed) Vue onUnmounted Lifecycle hook"
   },
   "Vue Lifecycle Hooks - onBeforeUnmount": {
-    "prefix": "v3onbeforeunmount",
+    "prefix": "beforeunmount",
     "body": ["onBeforeUnmount(() => {${1}})"],
     "description": "(beforeDestroy) Vue onBeforeUnmount Lifecycle hook"
   },
@@ -383,27 +420,8 @@
     ],
     "description": "Import a plugin to main.js or plugins file"
   },
-  "Vue Composition API Reactive Script": {
-    "prefix": "v3reactive-setup",
-    "body": [
-      "import { reactive, toRefs } from 'vue'",
-      "",
-      "export default {",
-      "\tsetup () {",
-      "\t\tconst state = reactive({",
-      "\t\t\t${0:count}: ${1:0},",
-      "\t\t})",
-      "\t",
-      "\t\treturn {",
-      "\t\t\t...toRefs(state),",
-      "\t\t}",
-      "\t}",
-      "}"
-    ],
-    "description": "Vue Composition API Script with Reactive"
-  },
   "Use Composition API within Options API": {
-    "prefix": "v3useinoptions",
+    "prefix": "useinoptions",
     "body": [
       "import { ${0:component} } from '@/composables/${0:component}.js'",
       "",

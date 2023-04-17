@@ -1,17 +1,141 @@
 {
-  "Vue Single File Component": {
-    "prefix": "vbase",
+  "Vue Single File Component Composition API Complete Setup": {
+    "prefix": "vsection",
     "body": [
       "<template>",
-      "\t<div>",
+      "\t<section name=\"${0:componentName}\">",
       "",
-      "\t</div>",
+      "\t</section>",
       "</template>",
       "",
-      "<script>",
-      "\texport default {",
-      "\t\t${0}",
-      "\t}",
+      "<script setup>",
+      "import { reactive, onMounted, computed } from 'vue'",
+      "",
+      "const props = defineProps({});",
+      "",
+      "const emits = defineEmits([]);",
+      "",
+      "const data = reactive({});",
+      "",
+      "const computedProperty = computed(()=>{});",
+      "",
+      "onMounted(()=>{\n\tinitialize();\n});",
+      "",
+      "function initialize(){}; ",
+      "</script>",
+      "",
+      "<style scoped>",
+      "</style>"
+    ],
+    "description": "Vue Single File Component Composition API Complete Setup"
+  },
+  "Vue Single File Component Composition API Setup": {
+    "prefix": "vsetup",
+    "body": [
+      "<template>",
+      "\t<section name=\"${0:componentName}\">",
+      "",
+      "\t</section>",
+      "</template>",
+      "",
+      "<script setup>",
+      "",
+      "</script>",
+      "",
+      "<style scoped>",
+      "</style>"
+    ],
+    "description": "Vue Single File Component Composition API Setup"
+  },
+  "Vue Single File Component Composition API Script Setup": {
+    "prefix": "scriptsetup",
+    "body": [
+      "<script setup>",
+      "import { reactive, onMounted, computed } from 'vue'",
+      "",
+      "const props = defineProps({});",
+      "",
+      "const emits = defineEmits([]);",
+      "",
+      "const data = reactive({});",
+      "",
+      "onMounted(()=>{\n\tinitialize();\n});",
+      "",
+      "const computedProperty = computed(()=>{});",
+      "",
+      "function initialize(){}; ",
+      "</script>"
+    ],
+    "description": "Vue Single File Component Composition API Script Setup"
+  },
+  "Vue Single File Component with SASS": {
+    "prefix": "vsection-sass",
+    "body": [
+      "<template>",
+      "\t<section>",
+      "",
+      "\t</section>",
+      "</template>",
+      "",
+      "<script setup>",
+      "",
+      "</script>",
+      "",
+      "<style lang=\"sass\" scoped>",
+      "",
+      "</style>"
+    ],
+    "description": "Base for Vue File with PostCSS"
+  },
+  "Vue Single File Component with LESS": {
+    "prefix": "vsection-less",
+    "body": [
+      "<template>",
+      "\t<section>",
+      "",
+      "\t</section>",
+      "</template>",
+      "",
+      "<script setup>",
+      "",
+      "</script>",
+      "",
+      "<style lang=\"less\" scoped>",
+      "",
+      "</style>"
+    ],
+    "description": "Base for Vue File with PostCSS"
+  },
+  "Vue Single File Component with postcss": {
+    "prefix": "vsection-pcss",
+    "body": [
+      "<template>",
+      "\t<section>",
+      "",
+      "\t</section>",
+      "</template>",
+      "",
+      "<script setup>",
+      "",
+      "</script>",
+      "",
+      "<style lang=\"postcss\" scoped>",
+      "",
+      "</style>"
+    ],
+    "description": "Base for Vue File with PostCSS"
+  },
+  "Vue Single File Component with SCSS": {
+    "prefix": "vsection-scss",
+    "body": [
+      "<template>",
+      "\t<section>",
+      "",
+      "\t</section>",
+      "</template>",
+      "",
+      "<script setup>",
+      "",
       "</script>",
       "",
       "<style lang=\"scss\" scoped>",
@@ -20,13 +144,53 @@
     ],
     "description": "Base for Vue File with SCSS"
   },
-  "Vue Single File Component with SASS": {
-    "prefix": "vbase-sass",
+  "Vue Single File Component with Stylus": {
+    "prefix": "vsection-styl",
     "body": [
       "<template>",
-      "\t<div>",
+      "\t<section>",
       "",
-      "\t</div>",
+      "\t</section>",
+      "</template>",
+      "",
+      "<script setup>",
+      "",
+      "</script>",
+      "",
+      "<style lang=\"stylus\" scoped>",
+      "",
+      "</style>"
+    ],
+    "description": "Base for Vue File with Stylus"
+  },
+  "Vue Single File Component": {
+    "prefix": "v2section",
+    "body": [
+      "<template>",
+      "\t<section>",
+      "",
+      "\t</section>",
+      "</template>",
+      "",
+      "<script>",
+      "\texport default {",
+      "\t\t${0}",
+      "\t}",
+      "</script>",
+      "",
+      "<style scoped>",
+      "",
+      "</style>"
+    ],
+    "description": "Base Vue File "
+  },
+  "Vue2 Single File Component with SASS": {
+    "prefix": "v2section-sass",
+    "body": [
+      "<template>",
+      "\t<section>",
+      "",
+      "\t</section>",
       "</template>",
       "",
       "<script>",
@@ -41,13 +205,13 @@
     ],
     "description": "Base for Vue File with PostCSS"
   },
-  "Vue Single File Component with LESS": {
-    "prefix": "vbase-less",
+  "Vue2 Single File Component with LESS": {
+    "prefix": "v2section-less",
     "body": [
       "<template>",
-      "\t<div>",
+      "\t<section>",
       "",
-      "\t</div>",
+      "\t</section>",
       "</template>",
       "",
       "<script>",
@@ -62,13 +226,13 @@
     ],
     "description": "Base for Vue File with PostCSS"
   },
-  "Vue Single File Component with postcss": {
-    "prefix": "vbase-pcss",
+  "Vue2 Single File Component with postcss": {
+    "prefix": "v2section-pcss",
     "body": [
       "<template>",
-      "\t<div>",
+      "\t<section>",
       "",
-      "\t</div>",
+      "\t</section>",
       "</template>",
       "",
       "<script>",
@@ -83,13 +247,13 @@
     ],
     "description": "Base for Vue File with PostCSS"
   },
-  "Vue Single File Component with Css": {
-    "prefix": "vbase-css",
+  "Vue2 Single File Component with SCSS": {
+    "prefix": "v2section-scss",
     "body": [
       "<template>",
-      "\t<div>",
+      "\t<section>",
       "",
-      "\t</div>",
+      "\t</section>",
       "</template>",
       "",
       "<script>",
@@ -98,19 +262,19 @@
       "\t}",
       "</script>",
       "",
-      "<style scoped>",
+      "<style lang=\"scss\" scoped>",
       "",
       "</style>"
     ],
-    "description": "Base for Vue File with CSS"
+    "description": "Base for Vue File with SCSS"
   },
-  "Vue Single File Component with Stylus": {
-    "prefix": "vbase-styl",
+  "Vue2 Single File Component with Stylus": {
+    "prefix": "v2section-styl",
     "body": [
       "<template>",
-      "\t<div>",
+      "\t<section>",
       "",
-      "\t</div>",
+      "\t</section>",
       "</template>",
       "",
       "<script>",
@@ -126,12 +290,12 @@
     "description": "Base for Vue File with Stylus"
   },
   "Vue Single File Component with Typescript": {
-    "prefix": "vbase-ts",
+    "prefix": "v2section-ts",
     "body": [
       "<template>",
-      "\t<div>",
+      "\t<section>",
       "",
-      "\t</div>",
+      "\t</section>",
       "</template>",
       "",
       "<script lang=\"ts\">",
@@ -149,12 +313,12 @@
     "description": "Base for Vue File with Typescript"
   },
   "Vue Single File Component with No Style": {
-    "prefix": "vbase-ns",
+    "prefix": "v2section-ns",
     "body": [
       "<template>",
-      "\t<div>",
+      "\t<section>",
       "",
-      "\t</div>",
+      "\t</section>",
       "</template>",
       "",
       "<script>",
@@ -166,12 +330,12 @@
     "description": "Base for Vue File with no styles"
   },
   "Vue Single File Component Composition API": {
-    "prefix": "vbase-3",
+    "prefix": "v3section",
     "body": [
       "<template>",
-      "\t<div>",
+      "\t<section>",
       "",
-      "\t</div>",
+      "\t</section>",
       "</template>",
       "",
       "<script>",
@@ -184,38 +348,19 @@
       "}",
       "</script>",
       "",
-      "<style lang=\"scss\" scoped>",
+      "<style scoped>",
       "",
       "</style>"
     ],
     "description": "Base for Vue File Composition API with SCSS"
   },
-  "Vue Single File Component Setup Composition API": {
-    "prefix": "vbase-3-setup",
-    "body": [
-      "<template>",
-      "\t<div>",
-      "",
-      "\t</div>",
-      "</template>",
-      "",
-      "<script setup>",
-      "",
-      "</script>",
-      "",
-      "<style lang=\"scss\" scoped>",
-      "",
-      "</style>"
-    ],
-    "description": "Base for Vue File Setup Composition API with SCSS"
-  },
   "Vue Single File Component Composition API Reactive": {
-    "prefix": "vbase-3-reactive",
+    "prefix": "v3section-reactive",
     "body": [
       "<template>",
-      "\t<div>",
+      "\t<section>",
       "",
-      "\t</div>",
+      "\t</section>",
       "</template>",
       "",
       "<script>",
@@ -234,19 +379,19 @@
       "}",
       "</script>",
       "",
-      "<style lang=\"scss\" scoped>",
+      "<style scoped>",
       "",
       "</style>"
     ],
     "description": "Base for Vue File Composition API with SCSS"
   },
   "Vue Single File Component Composition API with Typescript": {
-    "prefix": "vbase-3-ts",
+    "prefix": "v3section-ts",
     "body": [
       "<template>",
-      "\t<div>",
+      "\t<section>",
       "",
-      "\t</div>",
+      "\t</section>",
       "</template>",
       "",
       "<script lang=\"ts\">",
@@ -267,12 +412,12 @@
     "description": "Base for Vue File Composition API - Typescript"
   },
   "Vue Single File Component Setup Composition API with Typescript": {
-    "prefix": "vbase-3-ts-setup",
+    "prefix": "vsection-ts",
     "body": [
       "<template>",
-      "\t<div>",
+      "\t<section>",
       "",
-      "\t</div>",
+      "\t</section>",
       "</template>",
       "",
       "<script setup lang=\"ts\">",
@@ -286,12 +431,12 @@
     "description": "Base for Vue File Setup Composition API - Typescript"
   },
   "Vue Single File Component with Class based Typescript format": {
-    "prefix": "vbase-ts-class",
+    "prefix": "vsection-ts-class",
     "body": [
       "<template>",
-      "\t<div>",
+      "\t<section>",
       "",
-      "\t</div>",
+      "\t</section>",
       "</template>",
       "",
       "<script lang=\"ts\">",

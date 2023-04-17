@@ -1,5 +1,5 @@
 {
-  "name": "vue-vscode-snippets",
+  "name": "vue-section",
   "displayName": "Vue VSCode Snippets",
   "description": "Snippets that will supercharge your Vue workflow",
   "icon": "images/vue-logo.png",
@@ -10,13 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/sdras/vue-vscode-snippets.git"
+    "url": "https://github.com/yogeshgalav/vue-section.git"
   },
   "scripts": {
-    "build": "vsce package -o vue-vscode-snippets-$npm_package_version.vsix",
-    "install": "yarn build && code --install-extension vue-vscode-snippets-$npm_package_version.vsix"
+    "build": "vsce package -o vue-section-$npm_package_version.vsix",
+    "install": "yarn build && code --install-extension vue-section-$npm_package_version.vsix"
   },
   "keywords": [
+    "Vue SFC Snippets",
     "Vue",
     "Vue 3",
     "Vue 2",

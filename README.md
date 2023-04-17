@@ -16,11 +16,11 @@ _Versions Supported: Vue 2 and Vue 3_
 
 _Either_
 
-- click the extensions button (lowest square icon in the editor), and type in Vue VSCode Snippets, select the one by sdras
+- click the extensions button (lowest square icon in the editor), and type in Vue VSCode Snippets, select the one by yogeshgalav
 
 _or_
 
-- go here [vscode Extensions Marketplace](https://marketplace.visualstudio.com/items?itemName=sdras.vue-vscode-snippets)
+- go here [vscode Extensions Marketplace](https://marketplace.visualstudio.com/items?itemName=yogeshgalav.vue-section)
 
 ```javascript
 ext install Vue VSCode Snippets
@@ -34,20 +34,27 @@ You can enable tab completion (recommended) by opening `Code > Preferences > Set
 
 | Snippet            | Purpose                                                      |
 | ------------------ | ------------------------------------------------------------ |
-| `vbase`            | Single file component base with SCSS                         |
-| `vbase-3`          | Single File component Composition API with SCSS              |
-| `vbase-3-setup`    | Single File component setup Composition API with SCSS        |
-| `vbase-3-reactive` | Single File component Composition API with Reactive and SCSS |
-| `vbase-css`        | Single file component base with CSS                          |
-| `vbase-pcss`       | Single file component base with PostCSS                      |
-| `vbase-styl`       | Single file component base with Stylus                       |
-| `vbase-ts`         | Single file component base with Typescript                   |
-| `vbase-ts-class`   | Single file component base with Typescript Class Format      |
-| `vbase-3-ts`       | Single File component Composition API with Typescript        |
-| `vbase-3-ts-setup` | Single File component setup Composition API with Typescript  |
-| `vbase-ns`         | Single file component with no styles                         |
-| `vbase-sass`       | Single file component base with SASS                         |
-| `vbase-less`       | Single file component base with LESS                         |
+| `vsection`            | Single file component base with CSS Scoped                   |
+| `vsetup`            | Single file component base with CSS Scoped                   |
+| `scriptsetup`            | Single file component base with CSS Scoped                   |
+| `vsection-ts`            | Single file component base with CSS Scoped                   |
+| `vsection-ts-class`   | Single file component base with Typescript Class Format      |
+| `vsection-css`        | Single file component base with CSS                          |
+| `vsection-pcss`       | Single file component base with PostCSS                      |
+| `vsection-styl`       | Single file component base with Stylus                       |
+| `vsection-ts`         | Single file component base with Typescript                   |
+| `vsection-ns`         | Single file component with no styles                         |
+| `v3section`    | Single File component setup Composition API with SCSS        |
+| `v3section-reactive` | Single File component Composition API with Reactive and SCSS |
+| `v3section-ts` | Single File component Composition API with Reactive and SCSS |
+| `v2section`          | Single File component Composition API with SCSS              |
+| `v2section-sass`       | Single file component base with SASS                         |
+| `v2section-less`       | Single file component base with LESS                         |
+| `v2section-pcss`       | Single file component base with LESS                         |
+| `v2section-scss`       | Single file component base with LESS                         |
+| `v2section-styl`       | Single file component base with LESS                         |
+| `v2section-ts`       | Single file component base with LESS                         |
+| `v2section-ns`       | Single file component base with LESS                         |
 
 ### Template
 
@@ -73,7 +80,29 @@ You can enable tab completion (recommended) by opening `Code > Preferences > Set
 | `vemit-child`     | Emit event from child component     |
 | `vemit-parent`    | Emit event to parent component      |
 
-### Script
+### Vue SFC Composition API
+
+| Snippet             | Purpose                                               |
+| ------------------- | ----------------------------------------------------- |
+| `vprops`          | defineProps with type and default                                        |
+| `vemits`          | defineEmits declaration                                                  |
+| `reactive`        | Vue Composition API - reactive                        |
+| `reactive-setup`  | Vue Composition API - reactive with setup boilerplate |
+| `computed`        | Vue Composition API - computed                        |
+| `watch`           | Vue Composition API - watcher single source           |
+| `watch-array`     | Vue Composition API - watch as array                  |
+| `watcheffect`     | Vue Composition API - watchEffect                     |
+| `ref`             | Vue Ref                                               |
+| `mounted`       | Lifecycle hook - onMounted                            |
+| `beforemount`   | Lifecycle hook - onBeforeMount                        |
+| `beforeupdate`  | Lifecycle hook - onBeforeUpdate                       |
+| `updated`       | Lifecycle hook - onUpdated                            |
+| `errorcaptured` | Lifecycle hook - onErrorCaptured                      |
+| `unmount`     | Lifecycle hook - (destroyed) onUnmounted              |
+| `beforeunmount` | Lifecycle hook - (beforeDestroy) onBeforeUnmount      |
+| `useinoptions`    | Use Composition API in Options API                    |
+
+### Vue Optional API
 
 | Snippet           | Purpose                                                                  |
 | ----------------- | ------------------------------------------------------------------------ |
@@ -89,7 +118,7 @@ You can enable tab completion (recommended) by opening `Code > Preferences > Set
 | `vupdated`        | updated lifecycle method                                                 |
 | `vbeforedestroy`  | beforeDestroy lifecycle method                                           |
 | `vdestroyed`      | destroyed lifecycle method                                               |
-| `vprops`          | Props with type and default                                              |
+| `v2props`         | Props with type and default                                              |
 | `vimport`         | Import one component into another                                        |
 | `vimport-dynamic` | Import one component that should be lazy loaded by webpack               |
 | `vcomponents`     | Import one component into another within the export statement            |
@@ -109,25 +138,6 @@ You can enable tab completion (recommended) by opening `Code > Preferences > Set
 | `vdispatch`       | Dispatch to Vuex store in methods for action                             |
 | `vtest`           | A simple unit testing component                                          |
 
-### Vue Composition API
-
-| Snippet             | Purpose                                               |
-| ------------------- | ----------------------------------------------------- |
-| `v3reactive`        | Vue Composition API - reactive                        |
-| `v3reactive-setup`  | Vue Composition API - reactive with setup boilerplate |
-| `v3computed`        | Vue Composition API - computed                        |
-| `v3watch`           | Vue Composition API - watcher single source           |
-| `v3watch-array`     | Vue Composition API - watch as array                  |
-| `v3watcheffect`     | Vue Composition API - watchEffect                     |
-| `v3ref`             | Vue Ref                                               |
-| `v3onmounted`       | Lifecycle hook - onMounted                            |
-| `v3onbeforemount`   | Lifecycle hook - onBeforeMount                        |
-| `v3onbeforeupdate`  | Lifecycle hook - onBeforeUpdate                       |
-| `v3onupdated`       | Lifecycle hook - onUpdated                            |
-| `v3onerrorcaptured` | Lifecycle hook - onErrorCaptured                      |
-| `v3onunmounted`     | Lifecycle hook - (destroyed) onUnmounted              |
-| `v3onbeforeunmount` | Lifecycle hook - (beforeDestroy) onBeforeUnmount      |
-| `v3useinoptions`    | Use Composition API in Options API                    |
 
 ### Vuex
 
@@ -188,6 +198,6 @@ You can enable tab completion (recommended) by opening `Code > Preferences > Set
 
 ## Contributing
 
-This is an open source project open to anyone. Contributions are welcome [github](https://github.com/sdras/vue-vscode-snippets)
+This is an open source project open to anyone. Contributions are welcome [github](https://github.com/yogeshgalav/vue-section)
 
 If you are contributing a snippet, please be sure to add the documentation for it in the tables in the README, the pull request cannot be accepted without this addition. Thanks!
